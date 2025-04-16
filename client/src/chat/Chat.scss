@@ -1,0 +1,19 @@
+.wrapper {
+  margin: 0 auto;
+  width: 50%;
+}
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.userMsg {
+  text-align: left;
+  border: 2px solid green;
+}
+
+.aiMsg {
+  text-align: right;
+  border: 2px solid red;
+}
