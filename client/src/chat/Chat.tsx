@@ -25,14 +25,18 @@ export const Chat = () => {
           </div>
         ))}
       </div>
-
-      <div>
+      <div className="input">
         <input
           type="text"
           placeholder="Введите сообщение..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
           disabled={isPending}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleSend();
+            }
+          }}
         />
         <button
           disabled={isPending || input.trim() === ""}
